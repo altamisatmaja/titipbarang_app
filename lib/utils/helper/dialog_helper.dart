@@ -15,7 +15,7 @@ abstract class DialogHelper {
           shrinkWrap: true,
           padding: const EdgeInsets.fromLTRB(32.0, 0.0, 32.0, 32.0),
           children: [
-            AppAssets.images.illustrationFailedDialog.image(),
+            AppAssets.images.dummyAdsImage.image(),
             const SizedBox(height: 16.0),
             Text(
               titleText ?? 'txt_error'.tr,

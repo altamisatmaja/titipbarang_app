@@ -19,19 +19,114 @@ class $LibGen {
 class $LibResourcesGen {
   const $LibResourcesGen();
 
+  /// Directory path: lib/resources/icons
+  $LibResourcesIconsGen get icons => const $LibResourcesIconsGen();
+
   /// Directory path: lib/resources/images
   $LibResourcesImagesGen get images => const $LibResourcesImagesGen();
+}
+
+class $LibResourcesIconsGen {
+  const $LibResourcesIconsGen();
+
+  /// File path: lib/resources/icons/activity-active-icon.png
+  AssetGenImage get activityActiveIcon =>
+      const AssetGenImage('lib/resources/icons/activity-active-icon.png');
+
+  /// File path: lib/resources/icons/activity-unactive-icon.png
+  AssetGenImage get activityUnactiveIcon =>
+      const AssetGenImage('lib/resources/icons/activity-unactive-icon.png');
+
+  /// File path: lib/resources/icons/home-active-icon.png
+  AssetGenImage get homeActiveIcon =>
+      const AssetGenImage('lib/resources/icons/home-active-icon.png');
+
+  /// File path: lib/resources/icons/home_antarjemput_icon.png
+  AssetGenImage get homeAntarjemputIcon =>
+      const AssetGenImage('lib/resources/icons/home_antarjemput_icon.png');
+
+  /// File path: lib/resources/icons/home_packingbarang_icon.png
+  AssetGenImage get homePackingbarangIcon =>
+      const AssetGenImage('lib/resources/icons/home_packingbarang_icon.png');
+
+  /// File path: lib/resources/icons/home_selfstorage_icon.png
+  AssetGenImage get homeSelfstorageIcon =>
+      const AssetGenImage('lib/resources/icons/home_selfstorage_icon.png');
+
+  /// File path: lib/resources/icons/home_tenagaangkut_icon.png
+  AssetGenImage get homeTenagaangkutIcon =>
+      const AssetGenImage('lib/resources/icons/home_tenagaangkut_icon.png');
+
+  /// File path: lib/resources/icons/home_titipbarang_icon.png
+  AssetGenImage get homeTitipbarangIcon =>
+      const AssetGenImage('lib/resources/icons/home_titipbarang_icon.png');
+
+  /// File path: lib/resources/icons/home_transit_icon.png
+  AssetGenImage get homeTransitIcon =>
+      const AssetGenImage('lib/resources/icons/home_transit_icon.png');
+
+  /// File path: lib/resources/icons/information-active-icon.png
+  AssetGenImage get informationActiveIcon =>
+      const AssetGenImage('lib/resources/icons/information-active-icon.png');
+
+  /// File path: lib/resources/icons/information-unactive-icon.png
+  AssetGenImage get informationUnactiveIcon =>
+      const AssetGenImage('lib/resources/icons/information-unactive-icon.png');
+
+  /// File path: lib/resources/icons/profile-active-icon.png
+  AssetGenImage get profileActiveIcon =>
+      const AssetGenImage('lib/resources/icons/profile-active-icon.png');
+
+  /// File path: lib/resources/icons/profile-unactive-icon.png
+  AssetGenImage get profileUnactiveIcon =>
+      const AssetGenImage('lib/resources/icons/profile-unactive-icon.png');
+
+  /// File path: lib/resources/icons/titipbarang_icon_launcher.png
+  AssetGenImage get titipbarangIconLauncher =>
+      const AssetGenImage('lib/resources/icons/titipbarang_icon_launcher.png');
+
+  /// File path: lib/resources/icons/titipbarang_icon_text_color.png
+  AssetGenImage get titipbarangIconTextColor => const AssetGenImage(
+      'lib/resources/icons/titipbarang_icon_text_color.png');
+
+  /// File path: lib/resources/icons/titipbarang_splash_icon.png
+  AssetGenImage get titipbarangSplashIcon =>
+      const AssetGenImage('lib/resources/icons/titipbarang_splash_icon.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [
+        activityActiveIcon,
+        activityUnactiveIcon,
+        homeActiveIcon,
+        homeAntarjemputIcon,
+        homePackingbarangIcon,
+        homeSelfstorageIcon,
+        homeTenagaangkutIcon,
+        homeTitipbarangIcon,
+        homeTransitIcon,
+        informationActiveIcon,
+        informationUnactiveIcon,
+        profileActiveIcon,
+        profileUnactiveIcon,
+        titipbarangIconLauncher,
+        titipbarangIconTextColor,
+        titipbarangSplashIcon
+      ];
 }
 
 class $LibResourcesImagesGen {
   const $LibResourcesImagesGen();
 
-  /// File path: lib/resources/images/illustration_failed_dialog.png
-  AssetGenImage get illustrationFailedDialog => const AssetGenImage(
-      'lib/resources/images/illustration_failed_dialog.png');
+  /// File path: lib/resources/images/dummy_ads_image.png
+  AssetGenImage get dummyAdsImage =>
+      const AssetGenImage('lib/resources/images/dummy_ads_image.png');
+
+  /// File path: lib/resources/images/onboarding-img.png
+  AssetGenImage get onboardingImg =>
+      const AssetGenImage('lib/resources/images/onboarding-img.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [illustrationFailedDialog];
+  List<AssetGenImage> get values => [dummyAdsImage, onboardingImg];
 }
 
 class Assets {

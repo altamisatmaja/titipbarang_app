@@ -7,7 +7,7 @@ import 'package:titipbarang_app/data/remote/api_service.dart';
 import 'package:titipbarang_app/data/remote/wrapper/api_response.dart';
 import 'package:titipbarang_app/feature/auth/auth_state.dart';
 import 'package:titipbarang_app/feature/loading/loading_page.dart';
-import 'package:titipbarang_app/feature/sign_in/sign_in_page.dart';
+import 'package:titipbarang_app/feature/onboarding/onboarding_page.dart';
 import 'package:titipbarang_app/feature/main/main_page.dart';
 import 'package:titipbarang_app/model/user/user.dart';
 
@@ -66,7 +66,7 @@ class AuthController extends GetxController {
   }
 
   Future<void> clearData() async {
-    Get.offAllNamed(SignInPage.route);
+    Get.offAllNamed(OnboardingPage.route);
 
     currentUser.value = null;
 
