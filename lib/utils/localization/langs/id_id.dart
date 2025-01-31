@@ -28,4 +28,5 @@ final Map<String, String> idId = {
   'txt_welcome': 'Selamat datang, %s',
   'txt_dark_mode': 'Tema gelap',
   'txt_sign_out': 'Keluar',
+  'txt_skip': 'Lewati',
 };

@@ -32,6 +32,8 @@ dependencies:
   retrofit: ^4.4.1
   universal_io: ^2.2.2
   url_launcher: ^6.3.1
+  flutter_launcher_icons: ^0.14.3
+  flutter_native_splash: ^2.4.4
 
 dev_dependencies:
   build_runner: ^2.4.13
@@ -46,12 +48,137 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/icons/
-    - assets/images/
+    - assets/fonts/
     - lib/resources/icons/
     - lib/resources/images/
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/montserrat/Montserrat-Black.ttf
+          weight: 900
+        - asset: assets/fonts/montserrat/Montserrat-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/montserrat/Montserrat-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/montserrat/Montserrat-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/montserrat/Montserrat-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/montserrat/Montserrat-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/montserrat/Montserrat-Light.ttf
+          weight: 300
+        - asset: assets/fonts/montserrat/Montserrat-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/montserrat/Montserrat-Thin.ttf
+          weight: 100
+    - family: Raleway
+      fonts:
+        - asset: assets/fonts/raleway/Raleway-Regular.ttf
+        - asset: assets/fonts/raleway/Raleway-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/raleway/Raleway-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/raleway/Raleway-Light.ttf
+          weight: 300
+        - asset: assets/fonts/raleway/Raleway-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/raleway/Raleway-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/raleway/Raleway-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/raleway/Raleway-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/raleway/Raleway-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/raleway/Raleway-Black.ttf
+          weight: 900
 
 flutter_gen:
   output: lib/resources/
   integrations:
     rive: true
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "lib/resources/icons/titipbarang_splash_icon.png"
+  min_sdk_android: 21
+  web:
+    generate: true
+    image_path: "lib/resources/icons/titipbarang_splash_icon.png"
+    background_color: "#02AB14"
+    theme_color: "#02AB14"
+  windows:
+    generate: true
+    image_path: "lib/resources/icons/titipbarang_splash_icon.png"
+    icon_size: 48
+  macos:
+    generate: true
+    image_path: "lib/resources/icons/titipbarang_splash_icon.png"
+
+flutter_native_splash:
+  # dart run flutter_native_splash:create
+  color: "#02AB14"
+  #background_image: "assets/background.png"
+
+  #branding: assets/dart.png
+  branding_mode: bottom
+  branding_bottom_padding: 24
+
+  #color_dark: "#02AB14"
+  #background_image_dark: "assets/dark-background.png"
+  #image_dark: assets/splash-invert.png
+  #branding_dark: assets/dart_dark.png
+  android_12:
+    image: lib/resources/icons/titipbarang_splash_icon.png
+
+    # Splash screen background color.
+    color: "#02AB14"
+    # icon_background_color: "#111111"
+    #branding: assets/dart.png
+    #image_dark: assets/android12splash-invert.png
+    #color_dark: "#042a49"
+    #icon_background_color_dark: "#eeeeee"
+
+  android: true
+  ios: true
+  web: false
+
+  # Platform specific images can be specified with the following parameters, which will override
+  # the respective parameter.  You may specify all, selected, or none of these parameters:
+  #color_android: "#42a5f5"
+  #color_dark_android: "#042a49"
+  #color_ios: "#42a5f5"
+  #color_dark_ios: "#042a49"
+  #color_web: "#42a5f5"
+  #color_dark_web: "#042a49"
+  image_android: lib/resources/icons/titipbarang_splash_icon.png
+  image_dark_android: lib/resources/icons/titipbarang_splash_icon.png
+  image_ios: lib/resources/icons/2.0x/titipbarang_splash_icon.png
+  image_dark_ios: lib/resources/icons/titipbarang_splash_icon.png
+  #image_web: assets/splash-web.gif
+  #image_dark_web: assets/splash-invert-web.gif
+  #background_image_android: "assets/background-android.png"
+  #background_image_dark_android: "assets/dark-background-android.png"
+  #background_image_ios: "assets/background-ios.png"
+  #background_image_dark_ios: "assets/dark-background-ios.png"
+  #background_image_web: "assets/background-web.png"
+  #background_image_dark_web: "assets/dark-background-web.png"
+  #branding_android: assets/brand-android.png
+  #branding_bottom_padding_android: 24
+  #branding_dark_android: assets/dart_dark-android.png
+  #branding_ios: assets/brand-ios.png
+  #branding_bottom_padding_ios: 24
+  #branding_dark_ios: assets/dart_dark-ios.png
+  #branding_web: assets/brand-web.gif
+  #branding_dark_web: assets/dart_dark-web.gif
+
+  #fullscreen: true
+
+  # If you have changed the name(s) of your info.plist file(s), you can specify the filename(s)
+  # with the info_plist_files parameter.  Remove only the # characters in the three lines below,
+  # do not remove any spaces:
+  #info_plist_files:
+  #  - 'ios/Runner/Info-Debug.plist'
+  #  - 'ios/Runner/Info-Release.plist'

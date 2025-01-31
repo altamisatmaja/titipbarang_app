@@ -28,4 +28,5 @@ final Map<String, String> enUs = {
   'txt_welcome': 'Welcome, %s',
   'txt_dark_mode': 'Dark mode',
   'txt_sign_out': 'Sign out',
+  'txt_skip': 'Skip',
 };

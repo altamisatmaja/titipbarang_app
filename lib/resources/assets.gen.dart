@@ -37,6 +37,10 @@ class $LibResourcesIconsGen {
   AssetGenImage get activityUnactiveIcon =>
       const AssetGenImage('lib/resources/icons/activity-unactive-icon.png');
 
+  /// File path: lib/resources/icons/google-icon-white.png
+  AssetGenImage get googleIconWhite =>
+      const AssetGenImage('lib/resources/icons/google-icon-white.png');
+
   /// File path: lib/resources/icons/home-active-icon.png
   AssetGenImage get homeActiveIcon =>
       const AssetGenImage('lib/resources/icons/home-active-icon.png');
@@ -97,6 +101,7 @@ class $LibResourcesIconsGen {
   List<AssetGenImage> get values => [
         activityActiveIcon,
         activityUnactiveIcon,
+        googleIconWhite,
         homeActiveIcon,
         homeAntarjemputIcon,
         homePackingbarangIcon,

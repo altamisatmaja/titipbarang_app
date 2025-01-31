@@ -3,6 +3,7 @@ import 'package:titipbarang_app/resources/assets.gen.dart';
 
 abstract class AppAssets {
   static $LibResourcesImagesGen images = Assets.lib.resources.images;
+  static $LibResourcesIconsGen icon = Assets.lib.resources.icons;
   // static $LibResourcesImagesNobuIconPackGen get nobuIconPack => Assets.lib.resources.images.nobuIconPack;
   // static $LibResourcesImagesSmbIconPackGen get smbIconPack => Assets.lib.resources.images.smbIconPack;
   // static $LibResourcesImagesLogoGen get logo => Assets.lib.resources.images.logo;

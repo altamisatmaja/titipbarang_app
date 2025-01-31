@@ -57,4 +57,6 @@ abstract class AppInitializer {
       ..registerAdapter(StorageAdapter());
     await Hive.openBox<Storage>((Storage).toString());
   }
+
+
 }
