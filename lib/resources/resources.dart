@@ -13,7 +13,7 @@ abstract class AppAssets {
 
 abstract class AppColors {
   static const primary = Color(0xFFEEBE41);
-  // static const grey = Color(0xFF828282);
+  static const grey = Color(0xFF828282);
   // static const divider = Color(0xff8897AD);
   // static const avatarBorder = Color(0xffE8DDD1);
   // static const cardBackgroundDark = Color(0xff191919);

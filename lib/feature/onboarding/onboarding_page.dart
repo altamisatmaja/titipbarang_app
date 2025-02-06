@@ -1,4 +1,5 @@
 import 'package:flutter/gestures.dart';
+import 'package:titipbarang_app/feature/main/main_page.dart';
 import 'package:titipbarang_app/resources/resources.dart';
 
 import 'onboarding_controller.dart';
@@ -48,7 +49,7 @@ class OnboardingPage extends GetView<OnboardingController> {
                                       WidgetStatePropertyAll(Colors.black12),
                                   side: WidgetStatePropertyAll(
                                       BorderSide(color: Colors.black12))),
-                              onPressed: () {},
+                              onPressed: () => Get.to(() => const MainPage()),
                               child: Text('txt_skip'.tr),
                             ),
                           ],
