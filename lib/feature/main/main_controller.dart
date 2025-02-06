@@ -6,5 +6,17 @@ class MainController extends GetxController {
 
   RxInt selectedIndex = RxInt(0);
 
-  final PersistentTabController persistentTabController = PersistentTabController();
+  final PersistentTabController persistentTabController =
+      PersistentTabController(initialIndex: 0);
+
+  void onTabTapped(int index) {
+    selectedIndex.value = index;
+    persistentTabController.index = index;
+  }
+
+  @override
+  void onClose() {
+    persistentTabController.dispose();
+    super.onClose();
+  }
 }

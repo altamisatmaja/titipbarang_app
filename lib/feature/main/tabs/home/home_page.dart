@@ -112,15 +112,16 @@ class HomePage extends GetView<HomeController> {
                         physics: const NeverScrollableScrollPhysics(),
                         gridDelegate:
                             const SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                          crossAxisSpacing: 16.0,
-                          mainAxisSpacing: 16.0,
-                          childAspectRatio: 1.35
-                        ),
+                                crossAxisCount: 2,
+                                crossAxisSpacing: 16.0,
+                                mainAxisSpacing: 16.0,
+                                childAspectRatio: 1.35),
                         itemCount: services.length,
                         itemBuilder: (context, index) {
                           final service = services[index];
                           return ServiceCard(
+                            bgColor: service['bgColor'],
+                            borderColor: service['borderColor'],
                             title: service['title']!,
                             price: service['price']!,
                             imageUrl: service['imageUrl']!,
@@ -142,12 +143,16 @@ class ServiceCard extends StatelessWidget {
   final String title;
   final String price;
   final String imageUrl;
+  final Color borderColor;
+  final Color bgColor;
 
   const ServiceCard({
     required this.title,
     required this.price,
     required this.imageUrl,
     super.key,
+    required this.borderColor,
+    required this.bgColor,
   });
 
   @override
@@ -156,7 +161,7 @@ class ServiceCard extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8.0),
-        border: Border.all(color: AppColors.primary),
+        border: Border.all(color: borderColor),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -165,9 +170,9 @@ class ServiceCard extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(3),
             decoration: BoxDecoration(
-              color: AppColors.primary,
+              color: bgColor,
               border: Border.all(
-                color: const Color(0xFFA5D6A7),
+                color: borderColor,
                 width: 2.0,
               ),
               borderRadius: BorderRadius.circular(6.0),
@@ -185,7 +190,6 @@ class ServiceCard extends StatelessWidget {
               ),
             ),
           ),
-          
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -207,35 +211,47 @@ class ServiceCard extends StatelessWidget {
   }
 }
 
-final List<Map<String, String>> services = [
+final List<Map<String, dynamic>> services = [
   {
     'title': 'Titip Barang',
     'price': 'Rp 135,000',
     'imageUrl': AppAssets.icon.homeTitipbarangIcon.path,
+    'borderColor': AppColors.homeTitipBarangBorder,
+    'bgColor': AppColors.homeTitipBarangBg,
   },
   {
     'title': 'Transit',
     'price': 'Rp 50,000',
     'imageUrl': AppAssets.icon.homeTransitIcon.path,
+    'borderColor': AppColors.homeTransitBorder,
+    'bgColor': AppColors.homeTransitBg,
   },
   {
     'title': 'Tenaga Angkut',
     'price': 'Rp 50,000',
     'imageUrl': AppAssets.icon.homeTenagaangkutIcon.path,
+    'borderColor': AppColors.homeTenagaAngkutBorder,
+    'bgColor': AppColors.homeTenagaAngkutBg,
   },
   {
     'title': 'Antar Jemput',
     'price': 'Rp 20,000',
     'imageUrl': AppAssets.icon.homeAntarjemputIcon.path,
+    'borderColor': AppColors.homeAntarJemputBorder,
+    'bgColor': AppColors.homeAntarJemputBg,
   },
   {
     'title': 'Packing Barang',
     'price': 'Rp 25,000',
     'imageUrl': AppAssets.icon.homePackingbarangIcon.path,
+    'borderColor': AppColors.homePackingBarangBorder,
+    'bgColor': AppColors.homePackingBarangBg,
   },
   {
     'title': 'Self Storage',
     'price': 'Coming Soon',
     'imageUrl': AppAssets.icon.homeSelfstorageIcon.path,
+    'borderColor': AppColors.homeSelfStorageBorder,
+    'bgColor': AppColors.homeSelfStorageBg,
   },
 ];

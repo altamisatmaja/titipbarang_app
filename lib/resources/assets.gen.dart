@@ -45,6 +45,10 @@ class $LibResourcesIconsGen {
   AssetGenImage get homeActiveIcon =>
       const AssetGenImage('lib/resources/icons/home-active-icon.png');
 
+  /// File path: lib/resources/icons/home-unactive-icon.png
+  AssetGenImage get homeUnactiveIcon =>
+      const AssetGenImage('lib/resources/icons/home-unactive-icon.png');
+
   /// File path: lib/resources/icons/home_antarjemput_icon.png
   AssetGenImage get homeAntarjemputIcon =>
       const AssetGenImage('lib/resources/icons/home_antarjemput_icon.png');
@@ -103,6 +107,7 @@ class $LibResourcesIconsGen {
         activityUnactiveIcon,
         googleIconWhite,
         homeActiveIcon,
+        homeUnactiveIcon,
         homeAntarjemputIcon,
         homePackingbarangIcon,
         homeSelfstorageIcon,
