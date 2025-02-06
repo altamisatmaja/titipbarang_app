@@ -29,6 +29,6 @@ final Map<String, String> idId = {
   'txt_dark_mode': 'Tema gelap',
   'txt_sign_out': 'Keluar',
   'txt_skip': 'Lewati',
-  'txt_information': 'Information',
-  'txt_activity' : 'Activity'
+  'txt_information': 'Informasi',
+  'txt_activity' : 'Aktivitas'
 };

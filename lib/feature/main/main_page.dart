@@ -2,7 +2,6 @@ import 'package:titipbarang_app/feature/main/tabs/activity/activity_page.dart';
 import 'package:titipbarang_app/feature/main/tabs/home/home_page.dart';
 import 'package:titipbarang_app/feature/main/tabs/information/information_page.dart';
 import 'package:titipbarang_app/feature/main/tabs/profile/profile_page.dart';
-import 'package:titipbarang_app/resources/resources.dart';
 
 import 'main_controller.dart';
 import 'package:get/get.dart';
@@ -14,75 +13,10 @@ class MainPage extends GetView<MainController> {
 
   const MainPage({super.key});
 
-  List<PersistentBottomNavBarItem> _buildNavBarItems() {
-    return [
-      PersistentBottomNavBarItem(
-        icon: ClipRRect(
-          child: SizedBox(
-            height: 20,
-            width: 20,
-            child: controller.selectedIndex.value == 0
-                ? AppAssets.icon.homeActiveIcon.image()
-                : AppAssets.icon.homeUnactiveIcon.image(),
-          ),
-        ),
-        title: 'txt_home'.tr,
-        activeColorPrimary: AppColors.primary,
-        inactiveColorPrimary: AppColors.grey,
-      ),
-      PersistentBottomNavBarItem(
-        icon: ClipRRect(
-          clipBehavior: Clip.hardEdge,
-          child: SizedBox(
-            height: 20,
-            width: 20,
-            child: controller.selectedIndex.value == 1
-                ? AppAssets.icon.informationActiveIcon.image()
-                : AppAssets.icon.informationUnactiveIcon.image(),
-          ),
-        ),
-        title: 'txt_information'.tr,
-        activeColorPrimary: AppColors.primary,
-        inactiveColorPrimary: AppColors.grey,
-      ),
-      PersistentBottomNavBarItem(
-        icon: ClipRRect(
-          clipBehavior: Clip.hardEdge,
-          child: SizedBox(
-            height: 20,
-            width: 20,
-            child: controller.selectedIndex.value == 2
-                ? AppAssets.icon.activityActiveIcon.image()
-                : AppAssets.icon.activityUnactiveIcon.image(),
-          ),
-        ),
-        title: 'txt_activity'.tr,
-        activeColorPrimary: AppColors.primary,
-        inactiveColorPrimary: AppColors.grey,
-      ),
-      PersistentBottomNavBarItem(
-        icon: ClipRRect(
-          borderRadius: BorderRadius.circular(
-              10), // Optional: Add border radius if needed
-          child: SizedBox(
-            height: 20,
-            width: 20,
-            child: controller.selectedIndex.value == 3
-                ? AppAssets.icon.profileActiveIcon.image()
-                : AppAssets.icon.profileUnactiveIcon.image(),
-          ),
-        ),
-        title: 'txt_profile'.tr,
-        activeColorPrimary: AppColors.primary,
-        inactiveColorPrimary: AppColors.grey,
-      ),
-    ];
-  }
-
   @override
   Widget build(BuildContext context) {
     return Obx(() => PersistentTabView(
-          decoration: NavBarDecoration(border: Border.all(color: Colors.grey)),
+          decoration: NavBarDecoration(border: Border.all(color: Colors.black12)),
           context,
           controller: controller.persistentTabController,
           screens: const [
@@ -91,7 +25,7 @@ class MainPage extends GetView<MainController> {
             ActivityPage(),
             ProfilePage(),
           ],
-          items: _buildNavBarItems(),
+          items: controller.buildNavBarItems(),
           onItemSelected: (index) {
             controller.onTabTapped(index);
           },

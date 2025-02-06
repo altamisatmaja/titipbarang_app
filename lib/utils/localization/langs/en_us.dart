@@ -29,6 +29,6 @@ final Map<String, String> enUs = {
   'txt_dark_mode': 'Dark mode',
   'txt_sign_out': 'Sign out',
   'txt_skip': 'Skip',
-  'txt_information': 'Informasi',
+  'txt_information': 'Information',
   'txt_activity' : 'Aktivitas'
 };
