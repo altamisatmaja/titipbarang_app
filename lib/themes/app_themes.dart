@@ -60,6 +60,8 @@ abstract class AppThemes {
       );
 
   static ThemeData darkTheme(BuildContext context, ColorScheme colorScheme, ThemeData theme) => theme.copyWith(
+            scaffoldBackgroundColor: Colors.white,
+
         colorScheme: effectiveColorScheme(colorScheme),
         filledButtonTheme: effectiveFilledButtonTheme(context),
         outlinedButtonTheme: effectiveOutlinedButtonTheme(context),
